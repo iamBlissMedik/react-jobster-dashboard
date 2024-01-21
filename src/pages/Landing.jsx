@@ -1,17 +1,18 @@
-import logo from "../assets/images/logo.svg";
 import main from "../assets/images/main.svg";
+import Wrapper from "../assets/wrappers/LandingPage";
+import { Logo } from "../components";
 
 const Landing = () => {
   return (
-    <main>
+    <Wrapper>
       <nav>
-        <img src={logo} alt="jobster logo" className="logo" />
+        <Logo />
       </nav>
       <div className="container page">
         {/* info */}
         <div className="info">
           <h1>
-            job <span>tracking</span> app
+            Job <span>Tracking</span> app
           </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia soluta
@@ -23,7 +24,7 @@ const Landing = () => {
         </div>
         <img src={main} alt="job hunt" className="img main-img" />
       </div>
-    </main>
+    </Wrapper>
   );
 };
 

@@ -16,12 +16,18 @@ const Register = () => {
   // redux toolkit and useNavigate later
 
   const handleChange = (e) => {
-    console.log(e.target);
+    const name = e.target.name;
+    const value = e.target.value;
+    setValues({ ...values, [name]: value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    const { name, email, password, isMember } = values;
+    if (!email || !password || (!isMember && !name)) {
+      console.log("Please Fill Out All Fields");
+      return;
+    }
   };
   return (
     <Wrapper className="full-page">

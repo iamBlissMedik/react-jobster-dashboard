@@ -37,9 +37,13 @@ const Register = () => {
       dispatch(loginUser({ email, password }));
       return;
     }
-    dispatch(registerUser({
-      email, name, password
-    }));
+    dispatch(
+      registerUser({
+        email,
+        name,
+        password,
+      })
+    );
   };
   return (
     <Wrapper className="full-page">
@@ -80,7 +84,7 @@ const Register = () => {
             className="form-input"
           />
         </div>
-        <button type="submit" className="btn btn-block">
+        <button type="submit" className="btn btn-block" disabled={isLoading}>
           submit
         </button>
 

@@ -85,7 +85,7 @@ const Register = () => {
           />
         </div>
         <button type="submit" className="btn btn-block" disabled={isLoading}>
-          submit
+          {isLoading ? "loading..." : "Submit"}
         </button>
 
         <p>

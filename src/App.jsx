@@ -1,8 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Landing, Error, Register} from "./pages";
+import {
+  Landing,
+  Error,
+  Register,
+  AddJob,
+  AllJobs,
+  Profile,
+  SharedLayout,
+  Stats,
+} from "./pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { AddJob, AllJobs, Profile, SharedLayout, Stats } from "./pages/dashboard";
 
 function App() {
   return (
